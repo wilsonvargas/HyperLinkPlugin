@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>Plugins.Forms.HyperLinkControl</id>
+    <version>1.0.1</version>
+    <title>HyperLink Control Plugin for Xamarin.Forms</title>
+    <authors>Wilson Vargas</authors>
+    <owners>Wilson Vargas</owners>
+    <licenseUrl>https://github.com/wilsonvargas/HyperLinkPlugin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/wilsonvargas/HyperLinkPlugin</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/wilsonvargas/HyperLinkPlugin/master/images/icon/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+          Custom control for your Xamarin.Forms project to create a label as hyperlink. With this plugin you can show a label as a hyperlink for your websites, phone numbers and mails. Available for Android and iOs
+          Built against: 2.3.4.224
+</description>
+<copyright>Copyright ©2018</copyright>
+    <summary>Use a HyperLink in your Xamarin.Forms projects!</summary>
+<tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios, hyperlink, link, website</tags>
+    <dependencies>
+         <dependency id="Xamarin.Forms" version="2.3.4.224" />
+    </dependencies>
+  </metadata>
+  <files>
+      <!--Core-->
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.dll" target="lib\portable-net45+wp80+win8+wpa81\HyperLink.FormsPlugin.Abstractions.dll" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.xml" target="lib\portable-net45+wp80+win8+wpa81\HyperLink.FormsPlugin.Abstractions.xml" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.pdb" target="lib\portable-net45+wp80+win8+wpa81\HyperLink.FormsPlugin.Abstractions.pdb" />
+
+       <!--Xamarin.Android-->
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Android.dll" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Android.dll" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Android.xml" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Android.xml" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Android.pdb" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Android.pdb" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Abstractions.dll" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Abstractions.dll" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Abstractions.xml" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Abstractions.xml" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.Android\bin\Release\HyperLink.FormsPlugin.Abstractions.pdb" target="lib\MonoAndroid10\HyperLink.FormsPlugin.Abstractions.pdb" />
+
+
+     <!--Xamarin.iOSUnified-->
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.iOS\bin\iPhone\Release\HyperLink.FormsPlugin.iOS.dll" target="lib\Xamarin.iOS10\HyperLink.FormsPlugin.iOS.dll" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.iOS\bin\iPhone\Release\HyperLink.FormsPlugin.iOS.xml" target="lib\Xamarin.iOS10\HyperLink.FormsPlugin.iOS.xml" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.iOS\bin\iPhone\Release\HyperLink.FormsPlugin.Abstractions.dll" target="lib\Xamarin.iOS10\HyperLink.FormsPlugin.Abstractions.dll" />
+     <file src="../src/HyperLink\HyperLink.FormsPlugin.iOS\bin\iPhone\Release\HyperLink.FormsPlugin.Abstractions.xml" target="lib\Xamarin.iOS10\HyperLink.FormsPlugin.Abstractions.xml" />
+
+
+
+     <!--UWP-->
+       <file src="../src/HyperLink\HyperLink.FormsPlugin.UWP\bin\Release\HyperLink.FormsPlugin.UWP.dll" target="lib\UAP10\HyperLink.FormsPlugin.UWP.dll" />
+       <file src="../src/HyperLink\HyperLink.FormsPlugin.UWP\bin\Release\HyperLink.FormsPlugin.UWP.pdb" target="lib\UAP10\HyperLink.FormsPlugin.UWP.pdb" />
+       <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.dll" target="lib\UAP10\HyperLink.FormsPlugin.Abstractions.dll" />
+       <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.xml" target="lib\UAP10\HyperLink.FormsPlugin.Abstractions.xml" />
+       <file src="../src/HyperLink\HyperLink.FormsPlugin.Abstractions\bin\Release\HyperLink.FormsPlugin.Abstractions.pdb" target="lib\UAP10\HyperLink.FormsPlugin.Abstractions.pdb" />
+
+      
+</files>
+</package>
