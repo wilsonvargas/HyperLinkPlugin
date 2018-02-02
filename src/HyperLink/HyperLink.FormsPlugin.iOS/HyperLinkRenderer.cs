@@ -5,60 +5,34 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using HyperLink.FormsPlugin.iOS;
-using HyperLink.FormsPlugin.iOS.Controls;
 using HyperLink.FormsPlugin.Abstractions;
 using System.ComponentModel;
+using CoreGraphics;
 
 [assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
 
 namespace HyperLink.FormsPlugin.iOS
 {
-    public class HyperLinkRenderer : ViewRenderer<HyperLinkControl, HyperlinkUIView>
+    public class HyperLinkRenderer : ViewRenderer
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<HyperLinkControl> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<View> e)
         {
             base.OnElementChanged(e);
 
-            if (e.NewElement != e.OldElement)
-            {
-                if (e.OldElement != null)
-                    e.OldElement.PropertyChanged -= Element_PropertyChanged;
+            var view = (HyperLinkControl)Element;
+            if (view == null) return;
 
-                if (e.NewElement != null)
-                    e.NewElement.PropertyChanged += Element_PropertyChanged;
-            }
+            UITextView uilabelleftside = new UITextView(new CGRect(0, 0, view.Width, view.Height));
+            uilabelleftside.Text = view.Text;
+            uilabelleftside.Font = UIFont.SystemFontOfSize((float)view.FontSize);
+            uilabelleftside.Editable = false;
 
-            var textView = new HyperlinkUIView();
+            // Setting the data detector types mask to capture all types of link-able data
+            uilabelleftside.DataDetectorTypes = UIDataDetectorType.All;
+            uilabelleftside.BackgroundColor = UIColor.Clear;
 
-            SetNativeControl(textView);
-
-            SetText();
-        }
-
-        private void Element_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == HyperLinkControl.RawTextProperty.PropertyName)
-                SetText();
-        }
-
-        private void SetText()
-        {
-            CTStringAttributes attrs = new CTStringAttributes();
-            string text = Element.GetText(out List<HyperControlLink> links);
-            if (text != null)
-            {
-                var str = new NSMutableAttributedString(text);
-                str.AddAttribute(UIStringAttributeKey.Font, Element.Font.ToUIFont(), new NSRange(0, str.Length));
-                var textColor = (Color)Element.GetValue(Label.TextColorProperty);
-                str.AddAttribute(UIStringAttributeKey.ForegroundColor, textColor.ToUIColor(Color.Black),
-                    new NSRange(0, str.Length));
-
-                foreach (var item in links)
-                {
-                    str.AddAttribute(UIStringAttributeKey.Link, new NSUrl(item.Link), new NSRange(item.Start, item.Text.Length));
-                }
-                Control.AttributedText = str;
-            }
+            // overriding Xamarin Forms Label and replace with our native control
+            SetNativeControl(uilabelleftside);
         }
     }
 }

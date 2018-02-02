@@ -37,7 +37,6 @@
     <DocumentationFile>bin\iPhone\Release\HyperLink.FormsPlugin.iOS.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Controls\HyperlinkUIView.cs" />
     <Compile Include="HyperLinkRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
