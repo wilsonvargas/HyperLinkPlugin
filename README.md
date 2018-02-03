@@ -62,7 +62,7 @@ xmlns:hyperlink="clr-namespace:HyperLink.FormsPlugin.Abstractions;assembly=Hyper
 Then add the xaml:
 
 ```xml
-<hyperlink:HyperLinkControl Text="Click here: blog.wilsonvargas.com Phone number: +65 9215 7231 Email address: wilsonvargas_6@outlook.com"/>
+<hyperlink:HyperLinkControl TextColor="Gray" Text="Click here: blog.wilsonvargas.com&#x0a;Phone number: +65 9215 7231&#x0a;Email address: wilsonvargas_6@outlook.com"/>
 ```
 
 #### License
