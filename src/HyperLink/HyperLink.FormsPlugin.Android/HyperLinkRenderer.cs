@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Widget;
 using Android.Util;
+using System;
 
 [assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
 
@@ -13,6 +14,19 @@ namespace HyperLink.FormsPlugin.Droid
 {
     public class HyperLinkRenderer : LabelRenderer
     {
+        /// <summary>
+        /// Used for registration with dependency service
+        /// </summary>
+        public async static void Init()
+        {
+            var temp = DateTime.Now;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
