@@ -48,7 +48,7 @@ You **MUST** set the width & height requests to the same value. Here is a sample
 ```
 new HyperLinkControl
 {
-  Text = Color.Black
+  Text = blog.wilsonvargas.com
 }
 ```
 
