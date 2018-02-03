@@ -62,20 +62,7 @@ xmlns:hyperlink="clr-namespace:HyperLink.FormsPlugin.Abstractions;assembly=Hyper
 Then add the xaml:
 
 ```xml
-<hyperlink:HyperLinkControl>
-    <hyperlink:HyperLinkControl.FormattedText>
-        <FormattedString>
-            <FormattedString.Spans>
-                <Span Text="Click here:" FontAttributes="Bold" />
-                <Span Text="blog.wilsonvargas.com" />
-                <Span Text="phone number :" FontAttributes="Bold" />
-                <Span Text="+65 9215 7231" />
-                <Span Text="email address: " FontAttributes="Bold"/>
-                <Span Text="udara.blahblah@blah.com" />
-            </FormattedString.Spans>
-        </FormattedString>
-    </hyperlink:HyperLinkControl.FormattedText>
-</hyperlink:HyperLinkControl>
+<hyperlink:HyperLinkControl Text="Click here: blog.wilsonvargas.com&#x0a;Phone number: +65 9215 7231&#x0a;&#x0a;Email address: wilsonvargas_6@outlook.com"/>
 ```
 
 #### License
