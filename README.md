@@ -6,6 +6,8 @@ Custom control for your Xamarin.Forms project to create a label as hyperlink. Wi
 
 Build status: [![Build status](https://ci.appveyor.com/api/projects/status/jxgqs10kxj09vk5u?svg=true)](https://ci.appveyor.com/project/wilsonvargas/hyperlinkplugin)
 
+![image](https://github.com/wilsonvargas/HyperLinkPlugin/blob/master/images/images/image.png)
+
 
 #### Setup
 * Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.HyperLinkControl.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/) https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/
@@ -19,6 +21,10 @@ In your Android project call:
 HyperLink.FormsPlugin.Droid.HyperLinkRenderer.Init();
 ```
 
+<img src="https://raw.githubusercontent.com/wilsonvargas/HyperLinkPlugin/master/images/images/android.png" 
+data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/HyperLinkPlugin/master/images/images/android.png"
+ width="480" height="480" />
+
 ### iOS
 
 In your iOS project call:
@@ -26,6 +32,10 @@ In your iOS project call:
 ```
 HyperLink.FormsPlugin.iOS.HyperLinkRenderer.Init();
 ```
+
+<img src="https://raw.githubusercontent.com/wilsonvargas/HyperLinkPlugin/master/images/images/ios.png" 
+data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/HyperLinkPlugin/master/images/images/ios.png"
+ width="480" height="480" />
 
 You must do this AFTER you call Xamarin.Forms.Init();
 
