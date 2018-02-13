@@ -9,7 +9,7 @@ namespace HyperLink.FormsPlugin.UWP
     /// <summary>
     /// HyperLink Renderer
     /// </summary>
-    public class HyperLinkRenderer //: TRender (replace with renderer type
+    public class HyperLinkRenderer : ViewRenderer
     {
         /// <summary>
         /// Used for registration with dependency service

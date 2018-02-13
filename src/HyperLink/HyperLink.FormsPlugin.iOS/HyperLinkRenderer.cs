@@ -75,7 +75,6 @@ namespace HyperLink.FormsPlugin.iOS
                     Control.AttributedText = new NSAttributedString(myHtmlData, attr, ref nsError);
                 }
             }
-
         }
     }
 }
