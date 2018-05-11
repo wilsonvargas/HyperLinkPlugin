@@ -4,13 +4,13 @@
 
 Custom control for your Xamarin.Forms project to create a label as hyperlink. With this plugin you can show a label as a hyperlink for your websites, phone numbers and mails. Available for Android and iOs
 
-Build status: [![Build status](https://ci.appveyor.com/api/projects/status/jxgqs10kxj09vk5u?svg=true)](https://ci.appveyor.com/project/wilsonvargas/hyperlinkplugin)
+[![Build status](https://ci.appveyor.com/api/projects/status/jxgqs10kxj09vk5u?svg=true)](https://ci.appveyor.com/project/wilsonvargas/hyperlinkplugin) [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.HyperLinkControl.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/wilsondonations/5)
 
 ![image](https://github.com/wilsonvargas/HyperLinkPlugin/blob/master/images/images/image.png)
 
 
 #### Setup
-* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.HyperLinkControl.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/) https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/
+* Available on NuGet: [Plugins.Forms.HyperLinkControl](https://www.nuget.org/packages/Plugins.Forms.HyperLinkControl/)
 * Install into your PCL project and Client projects.
 
 ### Android
