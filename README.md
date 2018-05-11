@@ -1,5 +1,3 @@
-# HyperLinkPlugin
-
 # HyperLink Control Plugin for Xamarin.Forms
 
 Custom control for your Xamarin.Forms project to create a label as hyperlink. With this plugin you can show a label as a hyperlink for your websites, phone numbers and mails. Available for Android and iOs
