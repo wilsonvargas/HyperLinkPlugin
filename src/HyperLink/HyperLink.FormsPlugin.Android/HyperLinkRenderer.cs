@@ -1,12 +1,11 @@
-﻿using System.Linq;
-using HyperLink.FormsPlugin.Droid;
+﻿using Android.Text.Util;
+using Android.Util;
+using Android.Widget;
 using HyperLink.FormsPlugin.Abstractions;
-using Android.Text.Util;
+using HyperLink.FormsPlugin.Droid;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Android.Widget;
-using Android.Util;
-using System;
 
 [assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
 
@@ -22,9 +21,8 @@ namespace HyperLink.FormsPlugin.Droid
             var temp = DateTime.Now;
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
@@ -40,9 +38,8 @@ namespace HyperLink.FormsPlugin.Droid
             textView.AutoLinkMask = MatchOptions.All;
             textView.Text = view.Text;
             textView.SetTextSize(ComplexUnitType.Dip, (float)view.FontSize);
-            
-            SetNativeControl(textView);
 
+            SetNativeControl(textView);
         }
     }
 }

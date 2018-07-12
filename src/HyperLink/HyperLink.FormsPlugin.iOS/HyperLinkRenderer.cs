@@ -1,19 +1,17 @@
-﻿using CoreText;
+﻿using CoreGraphics;
 using Foundation;
-using System.Collections.Generic;
+using HyperLink.FormsPlugin.Abstractions;
+using HyperLink.FormsPlugin.iOS;
+using System;
+using System.ComponentModel;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using HyperLink.FormsPlugin.iOS;
-using HyperLink.FormsPlugin.Abstractions;
-using System.ComponentModel;
-using CoreGraphics;
-using System;
 
 [assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
 
 namespace HyperLink.FormsPlugin.iOS
-{   
+{
     public class HyperLinkRenderer : ViewRenderer<Label, UITextView>
     {
         /// <summary>
@@ -25,7 +23,7 @@ namespace HyperLink.FormsPlugin.iOS
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)

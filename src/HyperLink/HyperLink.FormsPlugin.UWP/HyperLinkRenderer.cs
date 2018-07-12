@@ -1,10 +1,4 @@
-﻿using HyperLink.FormsPlugin.Abstractions;
-using System;
-using Xamarin.Forms;
-using HyperLink.FormsPlugin.UWP;
-using Xamarin.Forms.Platform.UWP;
-
-//[assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
+﻿//[assembly: ExportRenderer(typeof(HyperLinkControl), typeof(HyperLinkRenderer))]
 namespace HyperLink.FormsPlugin.UWP
 {
     /// <summary>
