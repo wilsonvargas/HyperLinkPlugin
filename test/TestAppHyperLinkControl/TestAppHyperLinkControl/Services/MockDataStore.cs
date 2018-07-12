@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using TestAppHyperLinkControl.Models;
 
 [assembly: Xamarin.Forms.Dependency(typeof(TestAppHyperLinkControl.Services.MockDataStore))]
+
 namespace TestAppHyperLinkControl.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
-        List<Item> items;
-
         public MockDataStore()
         {
             items = new List<Item>();
@@ -31,17 +30,10 @@ namespace TestAppHyperLinkControl.Services
             }
         }
 
+        private List<Item> items;
+
         public async Task<bool> AddItemAsync(Item item)
         {
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }
-
-        public async Task<bool> UpdateItemAsync(Item item)
-        {
-            var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(_item);
             items.Add(item);
 
             return await Task.FromResult(true);
@@ -63,6 +55,15 @@ namespace TestAppHyperLinkControl.Services
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
+        }
+
+        public async Task<bool> UpdateItemAsync(Item item)
+        {
+            var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            items.Remove(_item);
+            items.Add(item);
+
+            return await Task.FromResult(true);
         }
     }
 }

@@ -2,19 +2,14 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
 using TestAppHyperLinkControl.Models;
 using TestAppHyperLinkControl.Views;
+using Xamarin.Forms;
 
 namespace TestAppHyperLinkControl.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
-
         public ItemsViewModel()
         {
             Title = "Browse";
@@ -29,7 +24,10 @@ namespace TestAppHyperLinkControl.ViewModels
             });
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public ObservableCollection<Item> Items { get; set; }
+        public Command LoadItemsCommand { get; set; }
+
+        private async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
                 return;

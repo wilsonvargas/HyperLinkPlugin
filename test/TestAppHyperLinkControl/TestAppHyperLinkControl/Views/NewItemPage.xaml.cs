@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-
+using TestAppHyperLinkControl.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using TestAppHyperLinkControl.Models;
 
 namespace TestAppHyperLinkControl.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
-
         public NewItemPage()
         {
             InitializeComponent();
@@ -26,7 +21,9 @@ namespace TestAppHyperLinkControl.Views
             BindingContext = this;
         }
 
-        async void Save_Clicked(object sender, EventArgs e)
+        public Item Item { get; set; }
+
+        private async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();

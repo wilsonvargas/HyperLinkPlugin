@@ -1,18 +1,13 @@
-﻿using System;
-
+﻿using TestAppHyperLinkControl.Models;
+using TestAppHyperLinkControl.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using TestAppHyperLinkControl.Models;
-using TestAppHyperLinkControl.ViewModels;
-
 namespace TestAppHyperLinkControl.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ItemDetailPage : ContentPage
-	{
-        ItemDetailViewModel viewModel;
-
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ItemDetailPage : ContentPage
+    {
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
@@ -33,5 +28,7 @@ namespace TestAppHyperLinkControl.Views
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
+
+        private ItemDetailViewModel viewModel;
     }
 }
